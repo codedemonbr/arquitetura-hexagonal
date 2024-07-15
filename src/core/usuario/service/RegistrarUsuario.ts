@@ -25,6 +25,8 @@ export default class RegistrarUsuario implements CasoDeUso<Usuario, void> {
       senha: senhaCripto,
     };
 
+    console.log(novoUsuario);
+
     this.repositorio.inserir(novoUsuario);
 
     console.log(`\n\n${JSON.stringify(novoUsuario)}`);

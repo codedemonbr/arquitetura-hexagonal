@@ -21,6 +21,7 @@ export default class RepositorioUsuarioDB {
     const [result] = await (await db).execute(sql, value);
 
     if (Array.isArray(result) && result.length === 0) return null;
+    //@ts-ignore
     return result[0];
   }
 }
